@@ -9,6 +9,7 @@ import IconWrapper from "@/components/IconWrapper.vue";
 import {Icon} from "@iconify/vue";
 import useTheme from "@/hooks/theme.ts";
 import {useSettingStore} from "@/stores/setting.ts";
+import {GITHUB} from "@/config/ENV.ts";
 
 let showFeedbackModal = $ref(false)
 const {toggleTheme} = useTheme()
@@ -28,7 +29,7 @@ const settingStore = useSettingStore()
       </IconWrapper>
     </Tooltip>
 
-    <a href="https://github.com/zyronon/typing-word" target="_blank">
+    <a :href="GITHUB" target="_blank">
       <BaseIcon
           title="Github地址"
           icon="mdi:github"/>
